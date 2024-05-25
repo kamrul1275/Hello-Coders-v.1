@@ -1,0 +1,149 @@
+/*-------------------------------------------
+Who We Are section
+---------------------------------------------*/
+.we_are {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  gap: 20px;
+}
+.who {
+  text-align: right;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+}
+.line {
+  border-left: 2px solid red;
+  width: 5px;
+  height: 100%;
+  padding: 5% 0;
+}
+.who_details p {
+  text-align: justify;
+  font-weight: 500;
+  font-size: 18px;
+}
+@media only screen and (max-width: 768px) {
+  .we_are {
+    width: 100%;
+    flex-direction: column;
+  }
+  .line {
+    display: none;
+  }
+  .who {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .benefit h1 {
+    font-size: 30px;
+  }
+}
+
+/* about page benefit of work */
+
+.benefit {
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+}
+.benefit h1 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+.benefit > div {
+  width: 85%;
+  margin: auto;
+}
+.data_holder {
+  text-align: center;
+  border-radius: 16px;
+  padding: 20px 30px;
+  border: 1px solid rgba(128, 128, 128, 0.23);
+  
+}
+.data_holder:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.benefit > div > div > img {
+  border-radius: 100px;
+}
+.benefit > div > div > h2 {
+  text-align: center;
+  color: #e92c33;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.benefit > div > div > p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  min-width: 200px;
+}
+@media only screen and (max-width: 768px) {
+  .benefit > div {
+    width: 100%;
+  }
+}
+
+/* Team work */
+
+/* our team hover */
+
+.mySwiper {
+  width: 100%;
+  height: 280px;
+}
+.swiper-slide {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 100px 10px #eeeeee;
+}
+
+.swiper-button-prev {
+  font-size: small !important;
+}
+
+.team_card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.member-info h5 {
+  margin-top: 20px;
+  font-size: 1 rem;
+}
+.member-info span {
+  font-size: 0.8 rem;
+}
+.swiper .swiper-wrapper .swiper-slide .team_card .member img {
+  filter: grayscale(0.7);
+  transition: all 0.3s ease-in-out;
+}
+.swiper .swiper-wrapper .swiper-slide .team_card .member:hover img {
+  transform: scale(1.2);
+  transition: transform 1s;
+  filter: grayscale(0);
+}
+.social .icon {
+  color: rgb(34, 147, 176);
+}
+.social .icon:hover {
+  color: rgb(236, 23, 15);
+}
+.swiper-wrapper {
+  background-color: white;
+}
+.swiper-slide {
+  box-shadow: none;
+}

@@ -1,0 +1,83 @@
+/* Contact Page */
+
+/* Background Image Contact page */
+
+.bg_grad {
+  background-image: linear-gradient(
+    to right top,
+    #f3f2ff,
+    #e9f7ff,
+    #e2fcff,
+    #e4fff7,
+    #f1ffeb
+  );
+  background-image: linear-gradient(to right top, #cbedee, #f3f2f3);
+}
+
+.bg_grad2 {
+  background-image: linear-gradient(
+    45deg,
+    hsl(60deg 47% 93%) 0%,
+    hsl(68deg 48% 93%) 11%,
+    hsl(75deg 48% 94%) 22%,
+    hsl(83deg 48% 95%) 33%,
+    hsl(92deg 47% 95%) 44%,
+    hsl(101deg 46% 96%) 56%,
+    hsl(111deg 44% 96%) 67%,
+    hsl(122deg 42% 97%) 78%,
+    hsl(132deg 43% 97%) 89%,
+    hsl(140deg 43% 97%) 100%
+  );
+}
+
+.page-title {
+  margin-top: 35px;
+  margin-bottom: 45px;
+  font-size: 50px;
+}
+
+.service-contact .form-column {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form {
+  margin-top: 10px;
+}
+
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group .form-control {
+  padding: 0 0 8px;
+  height: 46px;
+  font-size: 16px;
+  box-shadow: none;
+  border-width: 0 0 2px;
+  border-style: solid;
+  border-color: #beccb6;
+  border-radius: 0;
+  background: 0 0;
+}
+
+.text {
+  line-height: 28px;
+  margin-bottom: 30px;
+  font-size: 17px;
+  letter-spacing: -0.3px;
+  color: #707070;
+}
+
+.service-contact .inner .text {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.service-contact .inner h3 {
+  position: relative;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 5px;
+}

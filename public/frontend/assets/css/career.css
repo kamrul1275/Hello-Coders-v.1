@@ -1,0 +1,162 @@
+/* carrer page */
+
+.job-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.job-card {
+  background-color: white;
+  width: 350px;
+  padding: 5px;
+  box-shadow: 1px 5px 20px 2px #3404043b;
+}
+.img-Container {
+  height: 300px;
+  padding: 2px;
+  background-color: #02181c3b;
+}
+.job-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Data-Container {
+  background-color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 5px;
+  color: #02071a;
+}
+
+/* button design */
+
+.content__item {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content__item::before {
+  color: #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button {
+  width: 100%;
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+.button:hover {
+  color: #ffffff;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button--telesto {
+  overflow: hidden;
+  font-family: obvia, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.15rem;
+  color: #fff !important;
+  z-index : 10;
+}
+
+.button--telesto span {
+  display: block;
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+  z-index : 10;
+}
+
+.button--telesto > span {
+  overflow: hidden;
+  mix-blend-mode: difference;
+  color: #fff !important;
+  z-index : 10;
+}
+
+.button--telesto:hover > span > span {
+  color: #fff !important;
+  z-index : 10;
+  animation: MoveRightInitial 0.1s forwards, MoveRightEnd 0.3s forwards 0.2s;
+}
+
+.button--telesto::before,
+.button--telesto::after {
+  content: "";
+  background: #00ccff72;
+}
+.button--telesto:hover::before,
+.button--telesto:hover::after {
+  color: #fff !important;
+}
+@keyframes MoveRightInitial {
+  to {
+    transform: translate3d(105%, 0, 0);
+  }
+}
+
+@keyframes MoveRightEnd {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.button--telesto::before {
+  width: 135%;
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.button--telesto:hover::before {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto::after {
+  color : #fff;
+  width: 105%;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto:hover::after {
+  color : #fff;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.01s 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}

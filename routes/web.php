@@ -4,7 +4,9 @@ use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ServicesController;
 use App\Http\Controllers\Backend\CareerController;
 use App\Http\Controllers\Backend\TeamController;
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\UserController;
+//use App\Http\Controllers\Frontend\CareerController;
 use App\Http\Controllers\ProfileController;
 use App\Models\SubCategory;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +48,23 @@ require __DIR__.'/auth.php';
 
 
 
+
+
+
+
+// frontend part
+
+Route::get('/',[UserController::class,'Indedx'])->name('index.page');
+
+Route::get('/career',[UserController::class,'CareerPage'])->name('career.page');
+
+Route::get('/career/deatils',[UserController::class,'CareerDetails'])->name('career.deatils');
+
+
+Route::get('/contact',[UserController::class,'ContactPage'])->name('contact.page');
+
+
+Route::get('/about',[UserController::class,'AboutPage'])->name('about.page');
 
 // Admin Authentication
 
