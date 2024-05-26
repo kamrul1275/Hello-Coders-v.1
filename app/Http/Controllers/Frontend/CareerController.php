@@ -59,8 +59,8 @@ function careerDetailPage($id){
         $careers->email = $request->email;
         $careers->phone = $request->phone;
         $careers->message = $request->message;
-        $careers->cv = $request-> cd;
-    
+        $careers->cv = $request->cv;
+    //dd($careers);
     //dd($request->);
         // Save the brand to the database
         $careers->save();
@@ -72,7 +72,7 @@ function careerDetailPage($id){
             'alert-type' => 'success'
         );
     
-        return redirect()->route('career.deatils')->with($notification);
+        return redirect()->back()->with($notification);
     }//end method
 
     }

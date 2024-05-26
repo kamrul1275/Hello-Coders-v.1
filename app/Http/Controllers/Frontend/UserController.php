@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Career;
+use App\Models\Team;
+use App\Models\Services;
 
 class UserController extends Controller
 {
     function Indedx(){
-        return view('frontend.layout.dashboard');
+            $services = Services::get();
+        // $services = Services::get();
+        return view('frontend.layout.dashboard',compact('services'));
     }
     //end method
 
@@ -34,11 +37,14 @@ class UserController extends Controller
 
 
     function AboutPage(){
-        return view('frontend.about.about_page');
+
+        $teams = Team::get();
+        return view('frontend.about.about_page',compact('teams'));
 
     }
 
     function ServicePage(){
+    
         return view('frontend.service.service_page');
     }
         

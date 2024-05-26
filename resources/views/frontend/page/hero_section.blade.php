@@ -9,7 +9,7 @@
           </h1>
           <h2>Software Smart Solution</h2>
           <div class="d-flex">
-            <a href="#about" class="btn-get-started scrollto"
+            <a href="{{route('contact.page')}}" class="btn-get-started scrollto"
               >Get Started</a
             >
             <div

@@ -127,215 +127,44 @@
         </div>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
+
+
+          @foreach ($teams as $team)
+            
+          
+
             <div class="swiper-slide">
               <div class="team_card">
                 <div class="member" data-aos="fade-up" data-aos-delay="100">
                   <div class="member-img">
                     <img
-                      src="frontend/assets/img/team/kamrul.jpg"
+                      src="{{asset($team->team_image)}}"
                       class="team_img img-fluid"
                       alt=""
                     />
                   </div>
                   <div class="member-info">
-                    <h5>Kamrul Hassan</h5>
-                    <span>Software Engineer</span>
+                    <h5>{{$team->team_name}}</h5>
+                    <span>{{$team->job_position}}</span>
                   </div>
                
                 </div>
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/imran.JPG"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Shawn Imran</h5>
-                    <span>Senior Software Engineer</span>
-                  </div>
-                
-                </div>
-              </div>
-            </div>
+            @endforeach
 
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/nasim-.png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Izaz Ahmmed Nasim</h5>
-                    <span>Web Developer</span>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
+           
 
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/Khan_Awsafur_Rahman-.png"
-                      class="team_img img-fluid"
-                      alt=""
-                      style="object-fit: cover"
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Khan Awsafur Rahman</h5>
-                    <span>Web Developer</span>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
+   
 
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/soyeb.png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Md Soyeb Been Hasan</h5>
-                    <span>Web Designer</span>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
+    
 
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/jannat.png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Jannatul Fredous</h5>
-                    <span>Digital Marketer</span>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
+            
 
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/sumaiya (2).png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Sumayea Jahan Mahika</h5>
-                    <span>Digital Marketer</span>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
+          
 
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/tuhin.png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Tuhin Ahmed</h5>
-                    <span>Digital Marketer</span>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/redwan.png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Redwan Pramanik</h5>
-                    <span>Hr Admin</span>
-                  </div>
-               
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/farzana.png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Farjana</h5>
-                    <span>HR Executive</span>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="team_card">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member-img">
-                    <img
-                      src="frontend/assets/img/team/badhon.png"
-                      class="team_img img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="member-info">
-                    <h5>Md Badiujjaman Badhon</h5>
-                    <span>University Ambassador</span>
-                  </div>
-                
-                </div>
-              </div>
-            </div>
+   
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>

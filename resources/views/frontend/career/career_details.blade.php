@@ -12,6 +12,11 @@
     <link href="frontend/assets/img/1.png" rel="icon" />
     <link href="frontend/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
+       <!-- toaster -->
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+	
+	
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -382,6 +387,35 @@
     <!-- Template Main JS File -->
     <script src="{{ asset('frontend/assets/js/main.js')}}"></script>
     <script src="{{ asset('frontend/assets/js/careerDetails.js')}}"></script>
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="frontend/assets/js/main.js"></script>
+
+    	<!-- toaster -->
+	<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+ <!-- Toastr Notification Script -->
+ <script>
+    @if(Session::has('message'))
+        var type = "{{ Session::get('alert-type', 'info') }}";
+        switch (type) {
+            case 'info':
+                toastr.info("{{ Session::get('message') }}");
+                break;
+            case 'success':
+                toastr.success("{{ Session::get('message') }}");
+                break;
+            case 'warning':
+                toastr.warning("{{ Session::get('message') }}");
+                break;
+            case 'error':
+                toastr.error("{{ Session::get('message') }}");
+                break;
+        }
+    @endif
+</script>
     <script>
       // for loading
       const loading = () => {

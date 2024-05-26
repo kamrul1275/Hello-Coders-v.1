@@ -63,7 +63,7 @@ Route::get('/service',[UserController::class,'ServicePage'])->name('service.page
 
 Route::get('/career',[FrontendCareerController::class,'CareerPage'])->name('career.page');
 
-Route::get('/career/details/{id}',[FrontendCareerController::class,'careerDetailPage'])->name('career.details.test');
+Route::get('/career/details/{id}',[FrontendCareerController::class,'careerDetailPage'])->name('career.details');
 
 
 
