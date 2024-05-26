@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Career;
 
 class UserController extends Controller
 {
@@ -14,9 +15,10 @@ class UserController extends Controller
 
 
 
-    function CareerPage(){
-        return view('frontend.career.carrer_page');
-    }//end method
+    // function CareerPage(){
+    //     $careers = Career::get();
+    //     return view('frontend.career.carrer_page',compact('careers'));
+    // }//end method
 
 
 
@@ -26,14 +28,18 @@ class UserController extends Controller
     }
 
 
-    function ContactPage(){
-        return view('frontend.contact.contact_page');
-    }
+    // function ContactPage(){
+    //     return view('frontend.contact.contact_page');
+    // }
 
 
     function AboutPage(){
         return view('frontend.about.about_page');
 
+    }
+
+    function ServicePage(){
+        return view('frontend.service.service_page');
     }
         
 }

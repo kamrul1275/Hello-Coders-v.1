@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ServicesController;
 use App\Http\Controllers\Backend\CareerController;
 use App\Http\Controllers\Backend\TeamController;
+use App\Http\Controllers\Frontend\CareerController as FrontendCareerController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\UserController;
 //use App\Http\Controllers\Frontend\CareerController;
@@ -56,12 +57,18 @@ require __DIR__.'/auth.php';
 
 Route::get('/',[UserController::class,'Indedx'])->name('index.page');
 
-Route::get('/career',[UserController::class,'CareerPage'])->name('career.page');
+Route::get('/service',[UserController::class,'ServicePage'])->name('service.page');
+
+Route::get('/career',[FrontendCareerController::class,'CareerPage'])->name('career.page');
+Route::get('/career/details/{id}',[FrontendCareerController::class,'careerDetails'])->name('career.details');
+Route::get('/career/cv/store',[FrontendCareerController::class,'careerCvStore'])->name('career.cv.store');
 
 Route::get('/career/deatils',[UserController::class,'CareerDetails'])->name('career.deatils');
 
 
-Route::get('/contact',[UserController::class,'ContactPage'])->name('contact.page');
+Route::get('/contact',[ContactController::class,'ContactPage'])->name('contact.page');
+
+Route::post('/contact/store',[ContactController::class,'ContactStore'])->name('contact.store');
 
 
 Route::get('/about',[UserController::class,'AboutPage'])->name('about.page');

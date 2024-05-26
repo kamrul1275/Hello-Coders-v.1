@@ -49,6 +49,11 @@
     <link href="frontend/assets/css/footer.css" rel="stylesheet" />
     <link href="frontend/assets/css/lodader.css" rel="stylesheet" />
 
+    <!-- toaster -->
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+	
+	
+
     <!-- =======================================================
   * Template Name: eNno - v4.7.0
   * Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
@@ -289,6 +294,31 @@
 
     <!-- Template Main JS File -->
     <script src="frontend/assets/js/main.js"></script>
+
+	<!-- toaster -->
+	<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+
+ <!-- Toastr Notification Script -->
+ <script>
+        @if(Session::has('message'))
+            var type = "{{ Session::get('alert-type', 'info') }}";
+            switch (type) {
+                case 'info':
+                    toastr.info("{{ Session::get('message') }}");
+                    break;
+                case 'success':
+                    toastr.success("{{ Session::get('message') }}");
+                    break;
+                case 'warning':
+                    toastr.warning("{{ Session::get('message') }}");
+                    break;
+                case 'error':
+                    toastr.error("{{ Session::get('message') }}");
+                    break;
+            }
+        @endif
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

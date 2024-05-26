@@ -46,15 +46,17 @@ class CareerController extends Controller
         $career->career_slug = strtolower(str_replace(' ', '-', $request->career_name));
         $career->job_position = $request->input('job_position');
 
-        if($request->hasfile('career_image'))
-        {
-            $file = $request->file('career_image');
-            $extenstion = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extenstion;
-            $file->move('uploads/career_image/', $filename);
-            $career->career_image = $filename;
-        }
-
+          // Handle the image file upload
+          if($request->hasFile('career_image'))
+          {
+              $file = $request->file('career_image');
+              $extension = $file->getClientOriginalExtension();
+              $filename = time() . '.' . $extension;
+              $file->move('uploads/career/', $filename);
+              $career->career_image = 'uploads/career/' . $filename;
+          }
+      
+//dd($career);
         $career->save();
  
         $notification = array(

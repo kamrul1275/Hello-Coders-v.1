@@ -25,7 +25,7 @@
           </li>
           <!-- <li><a class="nav-link scrollto" href="courses.html">Course</a></li> -->
           <li>
-            <a class="nav-link scrollto menu_item" href="services.html"
+            <a class="nav-link scrollto menu_item" href="{{route('service.page')}}"
               >Services</a
             >
           </li>

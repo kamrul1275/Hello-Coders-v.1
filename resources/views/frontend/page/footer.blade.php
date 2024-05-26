@@ -116,7 +116,7 @@
           <div class="col-xl-6 col-lg-6 text-center text-lg-left">
             <div class="copyright-text">
               <p>
-                Copyright &copy; 2024, All Right Reserved
+                Copyright &copy; 2023, All Right Reserved
                 <a class="text-danger copyright-area-name">Hello Coders BD</a>
               </p>
             </div>

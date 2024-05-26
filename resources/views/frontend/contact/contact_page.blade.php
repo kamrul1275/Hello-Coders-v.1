@@ -16,8 +16,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
+
+    <!-- toaster -->
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+	
+	
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -40,7 +44,13 @@
       href="frontend/assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
-    <link href="frontend/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  
+
+    <!-- toaster -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+	
+	
+
 
     <!-- Template Main CSS File -->
     <link href="frontend/assets/css/style.css" rel="stylesheet" />
@@ -127,6 +137,14 @@
         <section class="service-contact py_100 bg_grad">
           <div class="container">
             <div class="row">
+
+<!-- @if (Session::has('msg'))
+<div class="alert alert-success" role="alert">
+{{ Session::get('Message Inserted Successfully') }}
+          </div>
+  
+@endif -->
+         
               <!--Form Column-->
               <div class="form-column col-lg-6 col-xs-12">
                 <div class="column-inner">
@@ -134,56 +152,47 @@
                   <div class="contact-form">
                     <form
                       method="post"
-                      action=""
+                      action="{{route('contact.store')}}"
                       id="contact-form"
                       novalidate="novalidate"
                     >
+
+                    @csrf
                       <div class="form-group">
                         <input
-                          class="form-control pd3"
-                          name="name"
-                          id="senderName"
-                          placeholder="Full Name"
-                          required=""
-                          type="text"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          class="form-control pd3"
-                          name="email"
-                          id="senderMail"
-                          placeholder="Email Address*"
-                          required=""
-                          type="email"
-                        />
+                          class="form-control pd3" name="name" id="senderName" placeholder="Full Name" required="" type="text"/>
+                            @if ($errors->has('name'))
+                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                            @endif
                       </div>
 
                       <div class="form-group">
-                        <input
-                          class="form-control pd3"
-                          name="phone"
-                          id="senderMail"
-                          placeholder="Phone*"
-                          required=""
-                          type="phone"
-                        />
+                        <input class="form-control pd3" name="email" id="senderMail" placeholder="Email Address*" required="" type="email"/>
+                      
+                      @if ($errors->has('email'))
+                         <span class="text-danger">{{ $errors->first('email') }}</span>
+                      @endif
+                      
                       </div>
 
                       <div class="form-group">
-                        <textarea
-                          name="message"
-                          class="form-control pd3"
-                          id="form_message"
-                          placeholder="Your Message*"
-                          rows="4"
+                        <input class="form-control pd3" name="phone" id="senderMail" placeholder="Phone*" required="" type="phone"/>
+                        @if ($errors->has('phone'))
+                         <span class="text-danger">{{ $errors->first('phone') }}</span>
+                       @endif
+                      
+                      </div>
+
+                      <div class="form-group">
+                        <textarea name="message" class="form-control pd3" id="form_message" placeholder="Your Message*" rows="4"
                         ></textarea>
+
+                        @if ($errors->has('message'))
+                         <span class="text-danger">{{ $errors->first('message') }}</span>
+                      @endif
                       </div>
                       <div class="form-group">
-                        <button
-                          type="button"
-                          class="btn btn-success px-4 py-3"
-                          id="frmbutton"
+                        <button type="submit" class="btn btn-success px-4 py-3" id="frmbutton"
                         >
                           Send Message
                         </button>
@@ -410,7 +419,35 @@
       <!-- End Footer -->
     </div>
     <!-- Template Main JS File -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="frontend/assets/js/main.js"></script>
+
+
+    	<!-- toaster -->
+	<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+ <!-- Toastr Notification Script -->
+ <script>
+    @if(Session::has('message'))
+        var type = "{{ Session::get('alert-type', 'info') }}";
+        switch (type) {
+            case 'info':
+                toastr.info("{{ Session::get('message') }}");
+                break;
+            case 'success':
+                toastr.success("{{ Session::get('message') }}");
+                break;
+            case 'warning':
+                toastr.warning("{{ Session::get('message') }}");
+                break;
+            case 'error':
+                toastr.error("{{ Session::get('message') }}");
+                break;
+        }
+    @endif
+</script>
+
+
     <script>
       // for loading
       const loading = () => {

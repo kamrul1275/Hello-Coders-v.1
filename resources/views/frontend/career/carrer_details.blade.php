@@ -171,32 +171,45 @@
               <span class="circle one"></span>
               <span class="circle two"></span>
 
-              <form action="" class="form-holder" autocomplete="off">
+              <form action="{{route('career.cv.store')}}" class="form-holder" autocomplete="off">
+              @csrf
                 <h3 class="title">Fill The Apply Form</h3>
                 <div class="input-container">
                   <input type="text" name="name" class="input" />
                   <label for="">Name</label>
-                  <span>Name</span>
+                 
+                  @if ($errors->has('name'))
+                      <span class="text-danger">{{ $errors->first('name') }}</span>
+                  @endif
                 </div>
                 <div class="input-container">
                   <input type="email" name="email" class="input" />
                   <label for="">Email</label>
-                  <span>Email</span>
+                 
+                  @if ($errors->has('email'))
+                      <span class="text-danger">{{ $errors->first('email') }}</span>
+                  @endif
                 </div>
                 <div class="input-container">
                   <input type="tel" name="phone" class="input" />
                   <label for="">Phone</label>
-                  <span>Phone</span>
+                  @if ($errors->has('phone'))
+                      <span class="text-danger">{{ $errors->first('phone') }}</span>
+                  @endif
                 </div>
                 <div class="input-container textarea">
                   <textarea name="message" class="input"></textarea>
                   <label for="">Shot Description</label>
-                  <span>Shot Description</span>
+                  @if ($errors->has('message'))
+                      <span class="text-danger">{{ $errors->first('message') }}</span>
+                  @endif
                 </div>
                 <div class="input-container focus">
                   <input type="file" name="cv" class="input_special" />
                   <label for="">Upload CV</label>
-                  <span>Upload CV</span>
+                  @if ($errors->has('cv'))
+                      <span class="text-danger">{{ $errors->first('cv') }}</span>
+                  @endif
                 </div>
                 <input type="submit" value="Send" class="btn" />
               </form>

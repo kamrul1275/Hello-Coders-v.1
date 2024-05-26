@@ -174,51 +174,30 @@
 
         <div class="container">
           <div class="job-container">
-            <!-- card 1 -->
-            <div class="job-card">
+
+          @foreach ($careers as $career)
+
+          <!-- {{$career->career_image }} -->
+
+          <div class="job-card">
               <div class="img-Container">
-                <img src="./frontend/assets/img/career.jpg" alt="" />
+              <img src="{{ asset($career->career_image) }}" style="max-width: 100%; height: auto;" alt="{{ $career->career_name }}" />
               </div>
               <div class="Data-Container">
-                <h2>Web Developer</h2>
-                <p>Intern</p>
+                
                 <div class="content__item">
-                  <a href="{{ route('career.deatils')}}" class="button button--telesto"
+                  <a href="{{ route('career.deatils',$career->id)}}" class="button button--telesto"
                     ><span><span>Apply Now</span></span></a
                   >
                 </div>
               </div>
             </div>
+            
+          @endforeach
             <!-- card 1 -->
-            <div class="job-card">
-              <div class="img-Container">
-                <img src="./frontend/assets/img/1.png" alt="" />
-              </div>
-              <div class="Data-Container">
-                <h2>Web Developer</h2>
-                <p>Intern</p>
-                <div class="content__item">
-                  <a href="{{ route('career.deatils')}}" class="button button--telesto"
-                    ><span><span>Apply Now</span></span></a
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- card 1 -->
-            <div class="job-card">
-              <div class="img-Container">
-                <img src="./frontend/assets/img/blackShadow.png" alt="" />
-              </div>
-              <div class="Data-Container">
-                <h2>Web Developer</h2>
-                <p>Intern</p>
-                <div class="content__item">
-                  <a href="{{ route('career.deatils')}}" class="button button--telesto"
-                    ><span><span>Apply Now</span></span></a
-                  >
-                </div>
-              </div>
-            </div>
+          
+ 
+     
           </div>
         </div>
       </main>
