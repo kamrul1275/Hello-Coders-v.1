@@ -46,15 +46,17 @@ class ServicesController extends Controller
        
 
 
-        if($request->hasfile('services_image'))
-        {
-            $file = $request->file('services_image');
-            $extenstion = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extenstion;
-            $file->move('uploads/Services/', $filename);
-            $Services->services_image = $filename;
-        }
-        //dd($Services);
+
+    // Handle the image file upload
+    if($request->hasFile('services_image'))
+    {
+        $file = $request->file('services_image');
+        $extension = $file->getClientOriginalExtension();
+        $filename = time() . '.' . $extension;
+        $file->move('uploads/services/', $filename);
+        $Services->services_image = 'uploads/services/' . $filename;
+    }
+
         $Services->save();
         // Handle file upload error
       // Prepare the notification

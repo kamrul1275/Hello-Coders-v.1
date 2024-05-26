@@ -141,11 +141,7 @@
                     <h5>Kamrul Hassan</h5>
                     <span>Software Engineer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+               
                 </div>
               </div>
             </div>
@@ -164,11 +160,7 @@
                     <h5>Shawn Imran</h5>
                     <span>Senior Software Engineer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                
                 </div>
               </div>
             </div>
@@ -187,11 +179,7 @@
                     <h5>Izaz Ahmmed Nasim</h5>
                     <span>Web Developer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -211,11 +199,7 @@
                     <h5>Khan Awsafur Rahman</h5>
                     <span>Web Developer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -234,11 +218,7 @@
                     <h5>Md Soyeb Been Hasan</h5>
                     <span>Web Designer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -257,11 +237,7 @@
                     <h5>Jannatul Fredous</h5>
                     <span>Digital Marketer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -280,11 +256,7 @@
                     <h5>Sumayea Jahan Mahika</h5>
                     <span>Digital Marketer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -303,11 +275,7 @@
                     <h5>Tuhin Ahmed</h5>
                     <span>Digital Marketer</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -326,11 +294,7 @@
                     <h5>Redwan Pramanik</h5>
                     <span>Hr Admin</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+               
                 </div>
               </div>
             </div>
@@ -349,11 +313,7 @@
                     <h5>Farjana</h5>
                     <span>HR Executive</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -372,11 +332,7 @@
                     <h5>Md Badiujjaman Badhon</h5>
                     <span>University Ambassador</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="ms-2 icon bi bi-twitter"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-facebook"></i></a>
-                    <a href=""><i class="ms-2 icon bi bi-linkedin"></i></a>
-                  </div>
+                
                 </div>
               </div>
             </div>

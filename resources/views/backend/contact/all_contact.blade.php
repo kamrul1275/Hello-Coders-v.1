@@ -19,8 +19,8 @@
 					</div>
 					<div class="ms-auto mt-2">
 						
-							 <a href="{{route('services.add')}}" class="btn btn-primary">Add Services</a> 
-						<!--  -->
+							<a href="{{route('add.career')}}" class="btn btn-primary">Add Career</a>
+						
 						
 					</div>
 				</div>
@@ -38,24 +38,21 @@
 									<tr>
 										<th>Id</th>
 										<th>Name</th>
-										<th>Description</th>
-										<th>Image</th>
+										<th>Email</th>
 										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
-									
 
-                                @foreach ($services as $key=>$service)
+                                @foreach ($contacts as $key=>$contact)
                                     
 									
 									<tr>
-										<td>{{$key+1}}</td>
-										<td>{{$service->title}}</td>
-										<td style="width:30px; height:50px;">{{$service->job_position}}</td>
+										<td>{{$key+1}}</td> 
+										<td>{{$contact->name}}</td>
+										<td>{{$contact->email}}</td>
+										<td>{{$contact->email}}</td>
 										
-										
-										<td> <img src="{{ asset($service->services_image) }}" style="height:50px; width:50px;" alt="">  </td>
 										<td>
                                             <a href="" class="btn btn-success">Edit</a>
                                             <a href="" class="btn btn-danger">Delete</a>
@@ -71,8 +68,7 @@
 									<tr>
                                         <th>Id</th>
 										<th>Name</th>
-										<th>Description</th>
-										<th>Image</th>
+                                        <th>Email</th>
 										<th>Action</th>
 									</tr>
 								</tfoot>

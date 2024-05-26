@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\CareerJob;
 use Illuminate\Http\Request;
 use App\Models\Career;
 
@@ -10,7 +11,7 @@ class CareerController extends Controller
 {
     function allCareer(){
 
-        $careers = Career::get();
+        $careers = CareerJob::get();
         return view('backend.career.all_career',compact('careers'));
     }//end method
 
@@ -25,13 +26,13 @@ class CareerController extends Controller
 
 
         $request->validate([
-            'career_name' => 'required|string',
+            'job_title' => 'required|string|unique:career_jobs,job_title',
             'job_position' => 'required|string|max:255',
             'career_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // max size of 2MB
         ], [
             // Custom error messages
-            'job_name.required' => 'The title name is required.',
-            'title.unique' => 'The title name must be unique.',
+            'job_title.required' => 'The title name is required.',
+            'job_title.unique' => 'The title name must be unique.',
             'job_position.required' => 'The job_position name is required.',
             'career_image.required' => 'The  image is required.',
             'career_image.image' => 'The file must be an image.',
@@ -40,10 +41,10 @@ class CareerController extends Controller
         ]);
         
         
-        $career = new Career();
-        $career->career_name = $request->input('career_name');
+        $career = new CareerJob();
+        $career->job_title = $request->input('job_title');
 
-        $career->career_slug = strtolower(str_replace(' ', '-', $request->career_name));
+       // $career->career_slug = strtolower(str_replace(' ', '-', $request->job_title));
         $career->job_position = $request->input('job_position');
 
           // Handle the image file upload

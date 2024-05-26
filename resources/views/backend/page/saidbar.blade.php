@@ -20,6 +20,21 @@
 					</a>
 				</li>
 
+				
+
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-donate-blood"></i>
+						</div>
+						<div class="menu-title">Contact</div>
+					</a>
+					<ul>
+						
+						<li> <a href="{{route('all.contact.backend')}}"><i class="bx bx-right-arrow-alt"></i>All Contact</a>
+						</li>
+					</ul>
+				</li>
+
 
 				<li>
 					<a href="javascript:;" class="has-arrow">
@@ -52,7 +67,7 @@
 
                 <li>
 					<a href="javascript:;" class="has-arrow">
-						<div class="parent-icon"><i class="bx bx-category"></i>
+						<div class="parent-icon"><i class="bx bx-user-circle"></i>
 						</div>
 						<div class="menu-title">Career</div>
 					</a>

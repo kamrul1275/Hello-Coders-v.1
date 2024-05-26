@@ -77,15 +77,13 @@
         <!-- End Header -->
         
         <!-- Career Details -->
+
         <div class="career_details">
           <div class="carer_img_part">
-            <img
-              src="{{ asset('frontend/assets/img/4956898_2592285-removebg-preview.png')}}"
-              alt=""
-            />
+          <img src="{{ asset($careers->career_image) }}" style="max-width: 100%; height: auto;" alt="{{ $careers->career_name }}" />
           </div>
           <div class="Career_info_part">
-            <h1 class="career_subject"><i class="fa-regular fa-hand-point-right"></i> Job Position : Web Development</h1>
+            <h1 class="career_subject"><i class="fa-regular fa-hand-point-right"></i> Job Position : {{$careers->job_title}}</h1>
             <h2>Requirements</h2>
 
             <h4>Education</h4>
@@ -119,6 +117,8 @@
             
           </div>
         </div>
+      
+  
         <!-- Apply form -->
         <div class="Apply_container">
           <span class="big-circle"></span>

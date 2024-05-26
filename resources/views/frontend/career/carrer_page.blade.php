@@ -186,7 +186,7 @@
               <div class="Data-Container">
                 
                 <div class="content__item">
-                  <a href="{{ route('career.deatils',$career->id)}}" class="button button--telesto"
+                  <a href="{{ route('career.details.test',$career->id)}}" class="button button--telesto"
                     ><span><span>Apply Now</span></span></a
                   >
                 </div>

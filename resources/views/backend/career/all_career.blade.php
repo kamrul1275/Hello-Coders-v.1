@@ -50,7 +50,7 @@
 									
 									<tr>
 										<td>{{$key+1}}</td> 
-										<td>{{$career->career_name}}</td>
+										<td>{{$career->job_title}}</td>
 										<td>{{$career->job_position}}</td>
 										<td> <img src="{{ asset($career->career_image) }}" style="height:50px; width:50px;" alt="">  </td>
 										

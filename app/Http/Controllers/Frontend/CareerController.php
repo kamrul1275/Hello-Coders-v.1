@@ -5,21 +5,22 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Career;
+use App\Models\CareerJob;
 
 class CareerController extends Controller
 {
     function CareerPage(){
 
-        $careers = Career::get();
+        $careers = CareerJob::get();
         return view('frontend.career.carrer_page',compact('careers'));
     }//end method
 
-function careerDetails($id){
+function careerDetailPage($id){
 
-    $careers =Career::findOrFail($id);
-//$careerDetails = Career::get();
-    //dd($careerDetails);
-    return view('frontend.career.carrer_details',compact('careers'));
+    $careers =CareerJob::findOrFail($id);
+    //return  $careers;
+  return view('frontend.career.career_details',compact('careers'));
+   
 }
 
     // function 

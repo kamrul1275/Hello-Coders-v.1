@@ -5,7 +5,9 @@ use App\Http\Controllers\Backend\ServicesController;
 use App\Http\Controllers\Backend\CareerController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Frontend\CareerController as FrontendCareerController;
-use App\Http\Controllers\Frontend\ContactController;
+// use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Frontend\ContactController as FrontendContactController;
 use App\Http\Controllers\Frontend\UserController;
 //use App\Http\Controllers\Frontend\CareerController;
 use App\Http\Controllers\ProfileController;
@@ -60,22 +62,33 @@ Route::get('/',[UserController::class,'Indedx'])->name('index.page');
 Route::get('/service',[UserController::class,'ServicePage'])->name('service.page');
 
 Route::get('/career',[FrontendCareerController::class,'CareerPage'])->name('career.page');
-Route::get('/career/details/{id}',[FrontendCareerController::class,'careerDetails'])->name('career.details');
+
+Route::get('/career/details/{id}',[FrontendCareerController::class,'careerDetailPage'])->name('career.details.test');
+
+
+
 Route::get('/career/cv/store',[FrontendCareerController::class,'careerCvStore'])->name('career.cv.store');
 
 Route::get('/career/deatils',[UserController::class,'CareerDetails'])->name('career.deatils');
 
+// contact page
+Route::get('/contact',[FrontendContactController::class,'ContactPage'])->name('contact.page');
 
-Route::get('/contact',[ContactController::class,'ContactPage'])->name('contact.page');
-
-Route::post('/contact/store',[ContactController::class,'ContactStore'])->name('contact.store');
+Route::post('/contact/store',[FrontendContactController::class,'ContactStore'])->name('contact.store');
 
 
 Route::get('/about',[UserController::class,'AboutPage'])->name('about.page');
 
+
+
+
+
+
+
+
+
+
 // Admin Authentication
-
-
 
 Route::get('/admin/login',[AdminController::class,'AdminLoginForm']); 
 //Route::post('/admin/login',[AdminController::class,'AdminLogin']); 
@@ -122,6 +135,8 @@ Route::get('/all/career',[CareerController::class,'allCareer'])->name('all.caree
 Route::get('/add/career',[CareerController::class,'addCareer'])->name('add.career');
 
 Route::post('/store/career',[CareerController::class,'storeCareer'])->name('store.career');
+
+Route::get('/all/contact',[ContactController::class,'contactAllBackend'])->name('all.contact.backend');
 
 
 });
