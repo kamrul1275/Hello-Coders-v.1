@@ -52,13 +52,13 @@
 									<tr>
 										<td>{{$key+1}}</td>
 										<td>{{$service->title}}</td>
-										<td style="width:30px; height:50px;">{{$service->job_position}}</td>
+										<td style="width:30px; height:50px;">{{$service->describtion}}</td>
 										
 										
 										<td> <img src="{{ asset($service->services_image) }}" style="height:50px; width:50px;" alt="">  </td>
 										<td>
                                             <a href="" class="btn btn-success">Edit</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
+											<a href="{{ route('delete.services', $service->id) }}" onclick="return confirm('Are you sure you want to delete this team?')" class="btn btn-danger">Delete</a>
                                         </td>
 										
 									</tr>

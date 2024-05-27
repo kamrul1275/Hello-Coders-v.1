@@ -49,7 +49,7 @@
       href="frontend/assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
-    <link href="frontend/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="{{asset('frontend/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
     <link href="frontend/assets/css/who_We_Are.css" rel="stylesheet" />
@@ -172,95 +172,7 @@
         </div>
         <!-- End Team Section -->
 
-        <!-- What we do -->
-        <div class="whatDo container mt-5">
-          <h1 style="color: #00156a">WHAT WE DO</h1>
-        </div>
-        <section class="iq-features">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-3 col-md-12"></div>
-              <div class="col-lg-6 col-md-12">
-                <div class="holderCircle">
-                  <div class="round"></div>
-                  <div class="dotCircle">
-                    <span class="itemDot active itemDot1" data-tab="1">
-                      <i class="fa-solid fa-screwdriver-wrench"></i>
-                      <span class="forActive"></span>
-                    </span>
-                    <span class="itemDot itemDot2" data-tab="2">
-                      <i class="fa-solid fa-chalkboard-user"></i>
-                      <span class="forActive"></span>
-                    </span>
-                    <span class="itemDot itemDot3" data-tab="3">
-                      <i class="fa-solid fa-code"></i>
-                      <span class="forActive"></span>
-                    </span>
-                    <span class="itemDot itemDot4" data-tab="4">
-                      <i class="fa-solid fa-house-laptop"></i>
-                      <span class="forActive"></span>
-                    </span>
-                    <span class="itemDot itemDot5" data-tab="5">
-                      <i class="fa-solid fa-users-gear"></i>
-                      <span class="forActive"></span>
-                    </span>
-                    <span class="itemDot itemDot6" data-tab="6">
-                      <i class="fa-solid fa-ranking-star"></i>
-                      <span class="forActive"></span>
-                    </span>
-                  </div>
-                  <div class="contentCircle">
-                    <div class="CirItem title-box active CirItem1">
-                      <h2 class="title"><span>IT Support</span></h2>
-                      <p>
-                        We Provide various type of it support by the
-                        professional engineers to our clients according to
-                        demand
-                      </p>
-                    </div>
-                    <div class="CirItem title-box CirItem2">
-                      <h2 class="title"><span> Software Development </span></h2>
-                      <p>
-                        Creating new software applications, platforms for
-                        general use or for specific industries or purposes.
-                      </p>
-                    </div>
-                    <div class="CirItem title-box CirItem3">
-                      <h2 class="title"><span>Web Development</span></h2>
-                      <p>
-                        Creating websites and online platforms. likes e-commerce
-                        , medical , ERP & so on.
-                      </p>
-                    </div>
-                    <div class="CirItem title-box CirItem4">
-                      <h2 class="title"><span>Digital Marketing</span></h2>
-                      <p>
-                        Promoting product to customers through various channels,
-                        such as advertising, online marketing and partnerships.
-                      </p>
-                    </div>
-                    <div class="CirItem title-box CirItem5">
-                      <h2 class="title"><span>QA Testing</span></h2>
-                      <p>
-                        Conducting thorough testing to identify and fix bugs,
-                        ensure the software functions correctly, and meets
-                        quality standards.
-                      </p>
-                    </div>
-                    <div class="CirItem title-box CirItem6">
-                      <h2 class="title"><span>Deployment and Release</span></h2>
-                      <p>
-                        Deploying it to production environments, and managing
-                        the release process, including versioning and updates.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-12"></div>
-            </div>
-          </div>
-        </section>
+  
         <!-- BENEFITS OF WORKING WITH US -->
         <section class="container benefit">
           <h1 style="color: #00156a">BENEFITS OF WORKING WITH US</h1>

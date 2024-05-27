@@ -108,25 +108,35 @@ class AdminController extends Controller
 {
     $id = Auth::user()->id;
     $userProfile = User::findOrFail($id);
-    $userProfile->name = $request->name;
-    $userProfile->email = $request->email;
-    $userProfile->phone = $request->phone;
-    $userProfile->address = $request->address;
 
-// Handle the image upload
-if ($request->hasFile('image')) {
-    $image = $request->file('image');
-    $filename = time() . '.' . $image->getClientOriginalExtension();
-    $imageSize = ImageManager::imagick()->read($image);
 
-    $resizedImage = $imageSize->resize(300,300);
-    // Save the image
-    $path = public_path('images/' . $filename);
-    $resizedImage->save($path);
+      // Handle the image file upload
+      if($request->hasFile('photo'))
+      {
+          $file = $request->file('photo');
+          $extension = $file->getClientOriginalExtension();
+          $filename = time() . '.' . $extension;
+          $file->move('uploads/profile/',$filename);
+          $userProfile->photo = 'uploads/profile/'.$filename;
+      }
+//dd($request->photo);
 
-    return back()->with('success', 'Image uploaded and resized successfully.');
-}
-return back()->with('error', 'Image upload failed.');
-}
-}
+          $userProfile->name = $request->name;
+          $userProfile->email = $request->email;
+          $userProfile->phone = $request->phone;
+          $userProfile->address = $request->address;
+          $userProfile->save();
+
+      // Handle the image upload
+      $notification = array(
+        'message' => 'Profile Update successfully',
+        'alert-type' => 'success'
+      );
+
+      // Redirect back with the notification
+      return redirect()->back()->with($notification);
+
+
+      }
+      }
 

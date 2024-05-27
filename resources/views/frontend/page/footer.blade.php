@@ -60,7 +60,7 @@
                 <a href="#"
                   ><i class="fab fa-facebook-f facebook-bg"></i
                 ></a>
-                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#" style="color: red;"><i class="fab fa-youtube fa-3x"></i></a>
                 <a href="#"
                   ><i class="fab fa-google-plus-g google-bg"></i
                 ></a>
@@ -73,12 +73,12 @@
                 <h3>Useful Links</h3>
               </div>
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="{{route('index.page')}}">Home</a></li>
+                <li><a href="{{route('about.page')}}">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Expert Team</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{route('all.career')}}">Career</a></li>
+                <li><a href="{{route('contact.page')}}">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -124,11 +124,11 @@
           <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
             <div class="footer-menu">
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="{{route('index.page')}}">Home</a></li>
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Policy</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{route('contact.page')}}">Contact</a></li>
               </ul>
             </div>
           </div>

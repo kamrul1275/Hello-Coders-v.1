@@ -26,13 +26,13 @@ class ServicesController extends Controller
 
         $request->validate([
             'title' => 'required|string|max:255|unique:services,title',
-            'job_position' => 'required|string|max:255',
+            'describtion' => 'required|string|max:255',
             'services_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // max size of 2MB
         ], [
             // Custom error messages
             'title.required' => 'The title name is required.',
             'title.unique' => 'The title name must be unique.',
-            'job_position.required' => 'The job_position name is required.',
+            'describtion.required' => 'The job_position name is required.',
             'services_image.required' => 'The  image is required.',
             'services_image.image' => 'The file must be an image.',
             'services_image.mimes' => 'The image must be a file of type: jpeg, png, jpg, gif.',
@@ -41,7 +41,7 @@ class ServicesController extends Controller
         
         $Services = new Services();
         $Services->title = $request->input('title');
-        $Services->job_position = $request->input('job_position');
+        $Services->job_position = $request->input('describtion');
         $Services->service_slug = strtolower(str_replace(' ', '-', $request->title));
        
 
@@ -65,6 +65,30 @@ class ServicesController extends Controller
         'alert-type' => 'success'
     );
         return redirect('/all/services')->with($notification);
+    }
+
+
+    function deleteServices($id){
+          $services= Services::find($id);
+          if ($services) {
+            // Delete the team
+            $services->delete();
+    
+            // Set the success notification
+            $notification = array(
+                'message' => 'Services deleted successfully',
+                'alert-type' => 'success'
+            );
+        } else {
+            // Set the failure notification if team not found
+            $notification = array(
+                'message' => 'Services not found',
+                'alert-type' => 'error'
+            );
+        }
+    
+        // Redirect back with the notification
+        return redirect()->back()->with($notification);
     }
 
 

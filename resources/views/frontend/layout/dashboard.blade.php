@@ -28,7 +28,7 @@
               />
             </div>
             <div class="details">
-              <a href="#" class="stretched-link">
+              <a href="{{route('service.details',$service->id)}}" class="stretched-link">
                 <h3>{{$service->title}}</h3>
                 <i class="fs-3 fa-sharp fa-solid fa-eye"></i>
               </a>

@@ -57,7 +57,7 @@
 										
 										<td>
                                             <a href="" class="btn btn-success">Edit</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
+                                            <a href="{{ route('delete.career', $career->id) }}" onclick="return confirm('Are you sure you want to delete this team?')" class="btn btn-danger">Delete</a>
                                         </td>
 										
 									</tr>

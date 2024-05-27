@@ -64,6 +64,38 @@ class TeamController extends Controller
         // Redirect with the notification
         return redirect()->route('all.team')->with($notification);
         }//end method 
+
+
+
+
+
+        function deleteTeam($id)
+        {
+            // Find the team by ID
+            $team = Team::find($id);
+        
+            // Check if the team exists
+            if ($team) {
+                // Delete the team
+                $team->delete();
+        
+                // Set the success notification
+                $notification = array(
+                    'message' => 'Team deleted successfully',
+                    'alert-type' => 'success'
+                );
+            } else {
+                // Set the failure notification if team not found
+                $notification = array(
+                    'message' => 'Team not found',
+                    'alert-type' => 'error'
+                );
+            }
+        
+            // Redirect back with the notification
+            return redirect()->back()->with($notification);
+        }
+        
     }
     
 

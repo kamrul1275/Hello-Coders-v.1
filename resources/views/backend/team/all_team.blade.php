@@ -55,7 +55,8 @@
 										<td> <img src="{{ asset($team->team_image) }}" style="height:50px; width:50px;" alt="">  </td>
 										<td>
                                             <a href="" class="btn btn-success">Edit</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
+											<a href="{{ route('delete.team', $team->id) }}" onclick="return confirm('Are you sure you want to delete this team?')" class="btn btn-danger">Delete</a>
+											
                                         </td>
 										
 									</tr>

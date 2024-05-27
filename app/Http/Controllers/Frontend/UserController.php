@@ -46,6 +46,17 @@ class UserController extends Controller
     function ServicePage(){
     
         return view('frontend.service.service_page');
+
     }
+
+
+    function ServiceDetais($id){
+        $servicesDetails = Services::find($id);
+    
+        return view('frontend.service.service_details',compact('servicesDetails'));
+
+    }
+
+
         
 }

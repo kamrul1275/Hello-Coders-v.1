@@ -72,5 +72,32 @@ class CareerController extends Controller
 
     }//end method
 
+
+
+    function deleteCareer($id){
+        $career = CareerJob::find($id);
+        
+        // Check if the team exists
+        if ($career) {
+            // Delete the team
+            $career->delete();
+    
+            // Set the success notification
+            $notification = array(
+                'message' => 'Career deleted successfully',
+                'alert-type' => 'success'
+            );
+        } else {
+            // Set the failure notification if team not found
+            $notification = array(
+                'message' => 'Career not found',
+                'alert-type' => 'error'
+            );
+        }
+    
+        // Redirect back with the notification
+        return redirect()->back()->with($notification);
+    }
+
     
 }

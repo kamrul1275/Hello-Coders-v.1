@@ -60,6 +60,8 @@ require __DIR__.'/auth.php';
 Route::get('/',[UserController::class,'Indedx'])->name('index.page');
 
 Route::get('/service',[UserController::class,'ServicePage'])->name('service.page');
+Route::get('/service/details/{id}',[UserController::class,'ServiceDetais'])->name('service.details');
+
 
 Route::get('/career',[FrontendCareerController::class,'CareerPage'])->name('career.page');
 
@@ -118,15 +120,17 @@ Route::middleware(['Admin'])->group(function () {
      Route::post('/store/team',[TeamController::class,'StoreTeam'])->name('store.team');
      Route::get('/all/team',[TeamController::class,'allTeam'])->name('all.team');
 
+     Route::get('/edit/team/{id}',[TeamController::class,'editTeam'])->name('edit.team');
+     Route::get('/delete/team/{id}',[TeamController::class,'deleteTeam'])->name('delete.team');
 
 
 
     //backend  Services part
      Route::get('/all/services',[ServicesController::class,'allServices'])->name('services.all');
      Route::get('/add/services',[ServicesController::class,'addServices'])->name('services.add');
-     Route::post('/store/services',[ServicesController::class,'storeServices'])->name('services.store');
+     Route::post('/store/services',[ServicesController::class,'storeServices'])->name('services.store'); 
 
-
+     Route::get('/delete/services/{id}',[ServicesController::class,'deleteServices'])->name('delete.services');
 
        //backend  subcategory  part
 
@@ -135,6 +139,8 @@ Route::get('/all/career',[CareerController::class,'allCareer'])->name('all.caree
 Route::get('/add/career',[CareerController::class,'addCareer'])->name('add.career');
 
 Route::post('/store/career',[CareerController::class,'storeCareer'])->name('store.career');
+Route::get('/delete/career/{id}',[CareerController::class,'deleteCareer'])->name('delete.career');
+
 
 Route::get('/all/contact',[ContactController::class,'contactAllBackend'])->name('all.contact.backend');
 

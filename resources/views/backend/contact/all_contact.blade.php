@@ -33,12 +33,14 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="table-responsive">
-							<table id="example" class="table table-striped table-bordered" style="width:100%">
+							<table id="example2" class="table table-striped table-bordered">
 								<thead>
 									<tr>
 										<th>Id</th>
 										<th>Name</th>
 										<th>Email</th>
+										<th>Phone</th>
+										<th>Address</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -51,7 +53,8 @@
 										<td>{{$key+1}}</td> 
 										<td>{{$contact->name}}</td>
 										<td>{{$contact->email}}</td>
-										<td>{{$contact->email}}</td>
+										<td>{{$contact->phone}}</td>
+										<td>{{$contact->message}}</td>
 										
 										<td>
                                             <a href="" class="btn btn-success">Edit</a>
@@ -68,7 +71,9 @@
 									<tr>
                                         <th>Id</th>
 										<th>Name</th>
-                                        <th>Email</th>
+										<th>Email</th>
+										<th>Phone</th>
+										<th>Address</th>
 										<th>Action</th>
 									</tr>
 								</tfoot>

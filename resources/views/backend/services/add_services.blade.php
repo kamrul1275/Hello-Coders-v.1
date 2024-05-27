@@ -57,9 +57,9 @@
                             <h6 class="mb-0"> Position</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="text" name="job_position" class="form-control" />
-                            @if ($errors->has('job_position'))
-                                <span class="text-danger">{{ $errors->first('job_position') }}</span>
+                            <input type="text" name="describtion" class="form-control" />
+                            @if ($errors->has('describtion'))
+                                <span class="text-danger">{{ $errors->first('describtion') }}</span>
                             @endif
                         </div>
                     </div>
